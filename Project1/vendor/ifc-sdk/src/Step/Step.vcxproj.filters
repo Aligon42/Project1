@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\BaseCopyOp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\BaseEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\BaseExpressDataSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\BaseObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\BaseSPFObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\BaseSPFReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\BaseSPFWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\BaseVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\ClassType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\ClientData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\ClientDataHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\Referenced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\SPFData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\SPFFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\SPFHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\StepLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\ASCII_codes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\Aggregation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\Array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\Bag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\BaseCopyOp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\BaseEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\BaseExpressDataSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\BaseObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\BaseSPFObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\BaseSPFReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\BaseSPFWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\BaseVisitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\Binary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\CallBack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\ClassType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\ClientData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\ClientDataHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\IntegerTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\RefLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\Referenced.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\SPFData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\SPFFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\SPFHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\Set.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\SimpleTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\StepLogger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\String.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\include\Step\Types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\build\src\Step\Step\Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\build\src\Step\Step\Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\AntoineCACHEUX\source\repos\ifc-sdk\src\Step\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B05EDA12-3659-3B85-B66D-E70AE963B066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{526BA7E3-9209-3B56-9F65-83E72E63C1D6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

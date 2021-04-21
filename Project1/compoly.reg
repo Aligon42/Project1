@@ -1,0 +1,24 @@
+REGEDIT
+; type library entries
+HKEY_CLASSES_ROOT\TypeLib\{uuid of type library}
+HKEY_CLASSES_ROOT\TypeLib\{uuid of type library}\1.0 = 
+    compoly 1.0 Type Library HKEY_CLASSES_ROOT\TypeLib\
+    {uuid of type library}\1.0\HELPDIR = x:\some\path\to
+HKEY_CLASSES_ROOT\TypeLib\{uuid of type library}\1.0\0\win32 =
+    x:\some\path\to\compoly.tlb
+HKEY_CLASSES_ROOT\TypeLib\{uuid of type library}\1.0\9\win32 =
+    x:\some\path\to\compoly.tlb
+; coclass entries
+HKEY_CLASSES_ROOT\CLSID\{uuid of coclass} = ComPolygon Class
+HKEY_CLASSES_ROOT\CLSID\{uuid of coclass}\InProcServer32 =
+    x:\some\path\to\compoly.dll 
+; interface entries
+HKEY_CLASSES_ROOT\Interface\{uuid of interface} = 
+    IComPolygon Interface
+HKEY_CLASSES_ROOT\Interface\{uuid of interface}\TypeLib = 
+    {uuid of type library}
+HKEY_CLASSES_ROOT\Interface\{uuid of interface}\ProxyStubClsid32 =
+    {00020424-0000-0000-C000-000000000046}
+; AcRxClass name
+HKEY_LOCAL_MACHINE\SOFTWARE\Autodesk\ObjectDBX\R24.0\ActiveXCLSID
+    \AsdkPoly = {uuid of coclass}
