@@ -1,8 +1,4 @@
 #pragma once
-void initApp();
-void unloadApp();
-void helloWorld();
-void main();
 
 #include <ifc2x3/InheritVisitor.h>
 
@@ -14,11 +10,6 @@ void main();
 
 typedef mathfu::Vector<float, 3> Vec3;
 typedef mathfu::Matrix<float, 4> Matrix4;
-
-class CreateConstructionPointVisitor : public ifc2x3::InheritVisitor
-{
-    std::list<Vec3> _points;
-};
 
 class ComputePlacementVisitor : public ifc2x3::InheritVisitor
 {

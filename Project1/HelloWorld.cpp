@@ -13,6 +13,8 @@
 #include <ifc2x3/IfcAxis2Placement.h>
 #include <ifc2x3/IfcAxis2Placement2D.h>
 #include <ifc2x3/IfcAxis2Placement3D.h>
+#include "CreateConstructionPointVisitor.h"
+#include "ComputePlacementVisitor.h"
 
 #include "arxHeaders.h"
 #include <sstream>
@@ -172,36 +174,53 @@ void main()
         acutPrintf(_T("Project long name is: %s\n"), GetWC(project->getLongName().toISO_8859(Step::String::Western_European).c_str()));
     }
 
+    //std::list<Vec3> _points;
+
     Step::RefLinkedList< ifc2x3::IfcWallStandardCase > wallStandardCases = expressDataSet->getAllIfcWallStandardCase();
-    Step::RefPtr< ifc2x3::IfcWallStandardCase > wallStandardCase = &*(wallStandardCases.begin());
-    auto idWall = wallStandardCase->getKey();
-    auto globalIdWall = wallStandardCase->getGlobalId();
-    auto nameWall = wallStandardCase->getName();
-    auto argsWall = wallStandardCase->getArgs();
-    auto polyline = wallStandardCase->getFillsVoids();
-    //auto exemple = wallStandardCase->get
-    
-    auto ObjectPlacementWall = wallStandardCase->getObjectPlacement()->getArgs();
+    auto idwall = wallStandardCases.begin()->getKey();
+    Step::RefPtr<ifc2x3::IfcWallStandardCase> wallStandardCase1 = expressDataSet->getIfcWallStandardCase(idwall);
 
-    Step::RefLinkedList< ifc2x3::IfcLocalPlacement > localPlacments = expressDataSet->getAllIfcLocalPlacement();
-    //Step::RefPtr< ifc2x3::IfcLocalPlacement > localPlacement = &*(wallStandardCases.ref);
+    /*auto it = wallStandardCases.begin();
+    Step::RefPtr< ifc2x3::IfcWallStandardCase > wallStandardCase = &*(it++++++);
+
+    Step::RefPtr<ifc2x3::IfcProductDefinitionShape> ProductDefinitionWall = expressDataSet->getIfcProductDefinitionShape(wallStandardCase->getRepresentation()->getKey());
+    auto ShapeRepresentationWall = ProductDefinitionWall->getRepresentations();
+
+    Step::RefPtr<ifc2x3::IfcShapeRepresentation> ShapeRepresentationWall1 = expressDataSet->getIfcShapeRepresentation(ShapeRepresentationWall.at(0)->getKey());
+    Step::RefPtr<ifc2x3::IfcShapeRepresentation> ShapeRepresentationWall2 = expressDataSet->getIfcShapeRepresentation(ShapeRepresentationWall.at(1)->getKey());
+    auto RepresentationItems = ShapeRepresentationWall2->getItems();
+    Step::RefPtr<ifc2x3::IfcRepresentationItem> RepresentationItem = *(RepresentationItems.begin());
+
+    Step::RefPtr<ifc2x3::IfcExtrudedAreaSolid> ExtrudeAreaSolidWall = expressDataSet->getIfcExtrudedAreaSolid(RepresentationItem->getKey());
+    auto hauteurExtrusion = ExtrudeAreaSolidWall->getDepth();
+
+    Step::RefPtr<ifc2x3::IfcArbitraryClosedProfileDef> ArbitraryClosedProfileDefWall = expressDataSet->getIfcArbitraryClosedProfileDef(ExtrudeAreaSolidWall->getExtrudedDirection()->getKey());
+
+    Step::RefPtr<ifc2x3::IfcPolyline> PolylineWall = expressDataSet->getIfcPolyline(ArbitraryClosedProfileDefWall->getOuterCurve()->getKey());
+
+    for (auto point : PolylineWall->getPoints())
+    {
+        _points.push_back(ComputePlacementVisitor::getPoint(point.get()));
+    }
+
+    _points.pop_back();*/
+
+    ComputePlacementVisitor placementVisitor;
+    CreateConstructionPointVisitor visitor1;
+    //Step::RefPtr<ifc2x3::IfcWall> wall1 = expressDataSet->getIfcWall(37);
+    wallStandardCase1->acceptVisitor(&visitor1);
+
+    std::list<Vec3> points1 = visitor1.getPoints();
+
+    wallStandardCase1->acceptVisitor(&placementVisitor);
+    Matrix4 transform1 = placementVisitor.getTransformation();
+
+    acutPrintf(_T("vecteur 1 : (%f, %f, %f)\n"), points1.begin()->x(), points1.begin()->y(), points1.begin()->z());
+
+    acutPrintf(_T("nb vec : %d"), points1.size());
 
 
-    ////if (argc > 2)
-    ////{
-    ////    // ** Write the file
-    ////    ifc2x3::SPFWriter writer(expressDataSet);
-    ////    std::ofstream filestream;
-    ////    filestream.open(argv[2]);
 
-    ////    bool status = writer.write(filestream);
-    ////    filestream.close();
-    ////    return status;
-    ////}
-
-    //delete expressDataSet;
-
-    ////return 0;
 }
 
 
@@ -226,4 +245,27 @@ acrxEntryPoint(AcRx::AppMsgCode msg, void* pkt)
 
     return AcRx::kRetOK;
 
+}
+
+Vec3 ComputePlacementVisitor::getPoint(ifc2x3::IfcCartesianPoint* point)
+{
+    Vec3 vector(0.f);
+
+    ifc2x3::List_IfcLengthMeasure_1_3& coor =
+        point->getCoordinates();
+    const std::size_t size = coor.size();
+
+    vector.x() = static_cast<float>(coor[0]);
+
+    if (size >= 2)
+    {
+        vector.y() = static_cast<float>(coor[1]);
+
+        if (size >= 3)
+        {
+            vector.z() = static_cast<float>(coor[2]);
+        }
+    }
+
+    return vector;
 }

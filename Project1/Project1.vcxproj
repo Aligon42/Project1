@@ -127,9 +127,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;PROJECT1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\AntoineCACHEUX\source\repos\Project1\Project1\vendor\ifc-sdk\src\Step;C:\Users\AntoineCACHEUX\source\repos\Project1\Project1\vendor\ifc-sdk\src\ifc2x3;C:\Users\AntoineCACHEUX\source\repos\Project1\Project1\vendor\ifc-sdk\include;C:\Autodesk\ObjectARX_for_AutoCAD_2021_Win_64bit_dlm\inc;C:\Autodesk\ObjectARX_for_AutoCAD_2021_Win_64bit_dlm\inc-x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\AntoineCACHEUX\source\repos\Project1\Project1\vendor\ifc-sdk\MathFu\include;C:\Users\AntoineCACHEUX\source\repos\Project1\Project1\vendor\ifc-sdk\src\Step;C:\Users\AntoineCACHEUX\source\repos\Project1\Project1\vendor\ifc-sdk\src\ifc2x3;C:\Users\AntoineCACHEUX\source\repos\Project1\Project1\vendor\ifc-sdk\include;C:\Autodesk\ObjectARX_for_AutoCAD_2021_Win_64bit_dlm\inc;C:\Autodesk\ObjectARX_for_AutoCAD_2021_Win_64bit_dlm\inc-x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DiagnosticsFormat>Classic</DiagnosticsFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -169,12 +170,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ComputePlacementVisitor.h" />
+    <ClInclude Include="CreateConstructionPointVisitor.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="HelloWorld.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="TestReadWrite.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ComputePlacementVisitor.cpp" />
+    <ClCompile Include="CreateConstructionPointVisitor.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
     <ClCompile Include="pch.cpp">
